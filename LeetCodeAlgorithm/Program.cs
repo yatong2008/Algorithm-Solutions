@@ -12,6 +12,8 @@ namespace LeetCodeAlgorithm
 
             //Console.WriteLine(IsHappy(19));
 
+            Console.WriteLine(MaxSubArray(new[] { 1, 2, -1, -2, 2, 1, -2, 1, 4, -5, 4 }));
+
         }
 
         //LeetCode #136. Single Number
@@ -75,6 +77,39 @@ namespace LeetCodeAlgorithm
             return IsReallyHappy(result, listOfPastResults);
         }
 
+        //LeetCode #53. Maximum Subarray
+        //https://leetcode.com/problems/maximum-subarray/
+        public static int MaxSubArray(int[] nums)
+        {
+            var globalMax = 0;
+            var currentMax = 0;
 
+            for (var i = 0; i < nums.Length; i++)
+            {
+                if (i == 0)
+                {
+                    currentMax = nums[0];
+                    globalMax = nums[0];
+                }
+                else
+                {
+                    if (currentMax >= 0)
+                    {
+                        currentMax += nums[i];
+                    } 
+                    else if (currentMax < 0)
+                    {
+                        currentMax = nums[i];
+                    }
+
+                    if (currentMax > globalMax)
+                    {
+                        globalMax = currentMax;
+                    }
+                }
+            }
+
+            return globalMax;
+        }
     }
 }
