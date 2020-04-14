@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace LeetCodeAlgorithm
@@ -13,7 +14,10 @@ namespace LeetCodeAlgorithm
             //Console.WriteLine(IsHappy(19));
 
             //Console.WriteLine(MaxSubArray(new[] { 1, 2, -1, -2, 2, 1, -2, 1, 4, -5, 4 }));
-            MoveZeroes(new[] { 0, 1, 0, 3, 12 });
+            //MoveZeroes(new[] { 0, 1, 0, 3, 12 });
+
+            Console.WriteLine(CountElements(new[] { 1, 1, 3, 3, 5, 5, 7, 7 }));
+
         }
 
         //LeetCode #136. Single Number
@@ -115,5 +119,15 @@ namespace LeetCodeAlgorithm
             }
 
         }
+
+
+        //LeetCode Counting Elements
+        public static int CountElements(int[] arr)
+        {
+            var hashArr = arr.ToHashSet();
+
+            return arr.Count(i => hashArr.Contains(i + 1));
+        }
+
     }
 }
