@@ -158,8 +158,8 @@ namespace LeetCodeAlgorithm
         }
 
 
-        //LeetCode #Middle of the Linked List
-
+        //876. Middle of the Linked List
+        //https://leetcode.com/problems/middle-of-the-linked-list/
         public class ListNode
         {
             public int val;
@@ -181,7 +181,6 @@ namespace LeetCodeAlgorithm
 
             return dict[counter / 2];
         }
-    }
 
     }
 }
