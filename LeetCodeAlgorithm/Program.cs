@@ -18,7 +18,7 @@ namespace LeetCodeAlgorithm
 
             //Console.WriteLine(CountElements(new[] { 1, 1, 3, 3, 5, 5, 7, 7 }));
 
-            GroupAnagrams(new[] {"eat", "tea", "tan", "ate", "nat", "bat"});
+            GroupAnagrams(new[] { "eat", "tea", "tan", "ate", "nat", "bat" });
 
         }
 
@@ -45,7 +45,7 @@ namespace LeetCodeAlgorithm
         //https://leetcode.com/problems/happy-number/
         public static bool IsHappy(int n)
         {
-            var listOfPastResults = new List<int> {n};
+            var listOfPastResults = new List<int> { n };
 
             return IsReallyHappy(n, listOfPastResults);
 
@@ -112,7 +112,7 @@ namespace LeetCodeAlgorithm
                     nums[clearedIndex] = nums[i];
                     clearedIndex++;
                 }
-                
+
             }
 
             for (var i = clearedIndex; i < nums.Length; i++)
@@ -156,5 +156,32 @@ namespace LeetCodeAlgorithm
 
             return dict.Values.ToList();
         }
+
+
+        //LeetCode #Middle of the Linked List
+
+        public class ListNode
+        {
+            public int val;
+            public ListNode next;
+            public ListNode(int x) { val = x; }
+        }
+
+        public ListNode MiddleNode(ListNode head)
+        {
+            var counter = 0;
+            var currentNode = head;
+            var dict = new Dictionary<int, ListNode>();
+
+            while (currentNode != null)
+            {
+                dict.Add(counter++, currentNode);
+                currentNode = currentNode.next;
+            }
+
+            return dict[counter / 2];
+        }
+    }
+
     }
 }
