@@ -12,8 +12,8 @@ namespace LeetCodeAlgorithm
 
             //Console.WriteLine(IsHappy(19));
 
-            Console.WriteLine(MaxSubArray(new[] { 1, 2, -1, -2, 2, 1, -2, 1, 4, -5, 4 }));
-
+            //Console.WriteLine(MaxSubArray(new[] { 1, 2, -1, -2, 2, 1, -2, 1, 4, -5, 4 }));
+            MoveZeroes(new[] { 0, 1, 0, 3, 12 });
         }
 
         //LeetCode #136. Single Number
@@ -81,35 +81,39 @@ namespace LeetCodeAlgorithm
         //https://leetcode.com/problems/maximum-subarray/
         public static int MaxSubArray(int[] nums)
         {
-            var globalMax = 0;
-            var currentMax = 0;
+            var globalMax = nums[0];
+            var currentMax = nums[0];
 
-            for (var i = 0; i < nums.Length; i++)
+            for (var i = 1; i < nums.Length; i++)
             {
-                if (i == 0)
-                {
-                    currentMax = nums[0];
-                    globalMax = nums[0];
-                }
-                else
-                {
-                    if (currentMax >= 0)
-                    {
-                        currentMax += nums[i];
-                    } 
-                    else if (currentMax < 0)
-                    {
-                        currentMax = nums[i];
-                    }
-
-                    if (currentMax > globalMax)
-                    {
-                        globalMax = currentMax;
-                    }
-                }
+                currentMax = Math.Max(currentMax + nums[i], nums[i]);
+                globalMax = Math.Max(currentMax, globalMax);
             }
 
             return globalMax;
+        }
+
+        //LeetCode #283. Move Zeroes
+        //https://leetcode.com/problems/move-zeroes/
+        public static void MoveZeroes(int[] nums)
+        {
+            var clearedIndex = 0;
+
+            for (var i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] != 0)
+                {
+                    nums[clearedIndex] = nums[i];
+                    clearedIndex++;
+                }
+                
+            }
+
+            for (var i = clearedIndex; i < nums.Length; i++)
+            {
+                nums[i] = 0;
+            }
+
         }
     }
 }
