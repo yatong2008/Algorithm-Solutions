@@ -16,7 +16,9 @@ namespace LeetCodeAlgorithm
             //Console.WriteLine(MaxSubArray(new[] { 1, 2, -1, -2, 2, 1, -2, 1, 4, -5, 4 }));
             //MoveZeroes(new[] { 0, 1, 0, 3, 12 });
 
-            Console.WriteLine(CountElements(new[] { 1, 1, 3, 3, 5, 5, 7, 7 }));
+            //Console.WriteLine(CountElements(new[] { 1, 1, 3, 3, 5, 5, 7, 7 }));
+
+            GroupAnagrams(new[] {"eat", "tea", "tan", "ate", "nat", "bat"});
 
         }
 
@@ -129,5 +131,30 @@ namespace LeetCodeAlgorithm
             return arr.Count(i => hashArr.Contains(i + 1));
         }
 
+        //LeetCode #49. Group Anagrams
+        //https://leetcode.com/problems/group-anagrams/
+        public static IList<IList<string>> GroupAnagrams(string[] strs)
+        {
+            var dict = new Dictionary<string, IList<string>>();
+
+            foreach (var str in strs)
+            {
+                var charArray = str.ToCharArray();
+
+                Array.Sort(charArray);
+                var keyString = new string(charArray);
+
+                if (dict.ContainsKey(keyString))
+                {
+                    dict[keyString].Add(str);
+                }
+                else
+                {
+                    dict.Add(keyString, new List<string> { str });
+                }
+            }
+
+            return dict.Values.ToList();
+        }
     }
 }
