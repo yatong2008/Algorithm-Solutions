@@ -18,7 +18,9 @@ namespace LeetCodeAlgorithm
 
             //Console.WriteLine(CountElements(new[] { 1, 1, 3, 3, 5, 5, 7, 7 }));
 
-            GroupAnagrams(new[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+            //GroupAnagrams(new[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+
+            Console.WriteLine(StringShift("abc", new[] {new[] {0, 1}, new[] {1, 2}}));
 
         }
 
@@ -182,5 +184,32 @@ namespace LeetCodeAlgorithm
             return dict[counter / 2];
         }
 
+
+
+        //  Perform String Shifts
+
+
+        public static string StringShift(string s, int[][] shift)
+        {
+            if (string.IsNullOrEmpty(s)) return s;
+
+            var leftShift = 0;
+            var rightShift = 0;
+
+            foreach (var i in shift)
+            {
+                if (i[0] == 0)
+                    leftShift += i[1];
+                else
+                    rightShift += i[1];
+            }
+
+            if (leftShift >= rightShift)
+                return s.Substring((leftShift - rightShift) % s.Length) +
+                       s.Substring(0, (leftShift - rightShift) % s.Length);
+         
+            return s.Substring(s.Length - (rightShift - leftShift) % s.Length) +
+                       s.Substring(0, s.Length - (rightShift - leftShift) % s.Length);
+        }
     }
 }
