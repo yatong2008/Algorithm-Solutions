@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerRank-RepeatedString",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank-LeftRotation", "..\HackerRank-LeftRotation\HackerRank-LeftRotation.csproj", "{B54CAFF8-0ADE-4E53-9591-3F282791CC57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank-MaxArraySum", "..\HackerRank-MaxArraySum\HackerRank-MaxArraySum.csproj", "{45B8F535-B2BA-4444-9F56-5A8A83E9529E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B54CAFF8-0ADE-4E53-9591-3F282791CC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B54CAFF8-0ADE-4E53-9591-3F282791CC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B54CAFF8-0ADE-4E53-9591-3F282791CC57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B8F535-B2BA-4444-9F56-5A8A83E9529E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B8F535-B2BA-4444-9F56-5A8A83E9529E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B8F535-B2BA-4444-9F56-5A8A83E9529E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B8F535-B2BA-4444-9F56-5A8A83E9529E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
