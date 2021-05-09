@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCodeAlgorithm", "LeetCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerRank-SalesByMatch", "..\HackerRank-SalesByMatch\HackerRank-SalesByMatch.csproj", "{0DE1ED3E-0EBD-481E-B853-A37F772A75BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank-JumpOnTheClouds", "..\HackerRank-JumpOnTheClouds\HackerRank-JumpOnTheClouds.csproj", "{142484AD-69F7-420C-B32A-389777831FCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerRank-JumpOnTheClouds", "..\HackerRank-JumpOnTheClouds\HackerRank-JumpOnTheClouds.csproj", "{142484AD-69F7-420C-B32A-389777831FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingValleys", "..\CountingValleys\CountingValleys.csproj", "{3C03AB08-FFF4-4DE4-BBC0-D2B53BD47D07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountingValleys", "..\CountingValleys\CountingValleys.csproj", "{3C03AB08-FFF4-4DE4-BBC0-D2B53BD47D07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank-RepeatedString", "..\RepeatedString\HackerRank-RepeatedString.csproj", "{A4A74762-4F3D-4EF1-80E0-3E9D1077616E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerRank-RepeatedString", "..\RepeatedString\HackerRank-RepeatedString.csproj", "{A4A74762-4F3D-4EF1-80E0-3E9D1077616E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank-LeftRotation", "..\HackerRank-LeftRotation\HackerRank-LeftRotation.csproj", "{B54CAFF8-0ADE-4E53-9591-3F282791CC57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A4A74762-4F3D-4EF1-80E0-3E9D1077616E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4A74762-4F3D-4EF1-80E0-3E9D1077616E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4A74762-4F3D-4EF1-80E0-3E9D1077616E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B54CAFF8-0ADE-4E53-9591-3F282791CC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54CAFF8-0ADE-4E53-9591-3F282791CC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54CAFF8-0ADE-4E53-9591-3F282791CC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54CAFF8-0ADE-4E53-9591-3F282791CC57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
